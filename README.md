@@ -3,7 +3,7 @@
 ###主要功能:
 ![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator Screen Shot 2016年11月18日 上午10.27.58.png)
 ###多列数组数据源:
-![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator Screen Shot 2016年11月18日 上午10.27.58.png)
+![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator Screen Shot 2016年11月18日 上午10.28.01.png)
 ####多列数组数据源代码生成
       DLPickerView *pickerView = [[DLPickerView alloc] initWithDataSource:@[@[@"Bei Jing",@"Shang Hai"], @[@"Li Lei",@"Han Meimei"]]
                                                        withSelectedItem:[sender.titleLabel.text componentsSeparatedByString:OwnerSeparator]
@@ -13,5 +13,16 @@
                                 ];
     
     [pickerView show];
+###单列数组数据源:
+![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator Screen Shot 2016年11月18日 上午10.28.04.png)
+####单列数组数据源代码生成
+      DLPickerView *pickerView = [[DLPickerView alloc] initWithDataSource:@[@"Man",@"Woman"]
+                                                       withSelectedItem:sender.titleLabel.text
+                                                      withSelectedBlock:^(id selectedItem) {
+                                                          [sender setTitle:selectedItem forState:UIControlStateNormal];
+                                                      }
+                                ];
+    
+      [pickerView show];
 
 
