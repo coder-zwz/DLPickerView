@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9yT-qr-TOU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="w7T-bl-JRa">
+            <objects>
+                <viewController id="9yT-qr-TOU" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xKW-dB-fua"/>
+                        <viewControllerLayoutGuide type="bottom" id="gyE-yy-p3c"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7l3-cg-4qm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mkk-9Z-FFz">
+                                <rect key="frame" x="36.5" y="197" width="302" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="302" id="AY0-GT-cam"/>
+                                </constraints>
+                                <state key="normal" title="多列Plist读取数据源"/>
+                                <connections>
+                                    <action selector="selectTime:" destination="9yT-qr-TOU" eventType="touchUpInside" id="Q8Y-xD-utw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnK-UX-nCo">
+                                <rect key="frame" x="31" y="86" width="313" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="313" id="5TH-eP-c6C"/>
+                                </constraints>
+                                <state key="normal" title="多列数组数据源"/>
+                                <connections>
+                                    <action selector="selectOwner:" destination="9yT-qr-TOU" eventType="touchUpInside" id="Bql-ls-fgm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEP-b4-ak8">
+                                <rect key="frame" x="39" y="138" width="297" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="297" id="mXG-6z-a4B"/>
+                                </constraints>
+                                <state key="normal" title="单列数组数据源"/>
+                                <connections>
+                                    <action selector="selectOwnerGender:" destination="9yT-qr-TOU" eventType="touchUpInside" id="hoa-Rc-J84"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kEP-b4-ak8" firstAttribute="top" secondItem="xKW-dB-fua" secondAttribute="bottom" constant="118" id="0HP-1e-55Y"/>
+                            <constraint firstItem="Mkk-9Z-FFz" firstAttribute="centerX" secondItem="7l3-cg-4qm" secondAttribute="centerX" id="MKe-XL-wBf"/>
+                            <constraint firstItem="nnK-UX-nCo" firstAttribute="top" secondItem="xKW-dB-fua" secondAttribute="bottom" constant="66" id="Ybm-uC-Zo9"/>
+                            <constraint firstItem="Mkk-9Z-FFz" firstAttribute="top" secondItem="kEP-b4-ak8" secondAttribute="bottom" constant="29" id="l49-Ac-0Og"/>
+                            <constraint firstItem="kEP-b4-ak8" firstAttribute="centerX" secondItem="7l3-cg-4qm" secondAttribute="centerX" id="mFe-hy-7oh"/>
+                            <constraint firstItem="nnK-UX-nCo" firstAttribute="centerX" secondItem="7l3-cg-4qm" secondAttribute="centerX" id="o9P-SN-VG6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z1K-R1-AyV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-172" y="25"/>
+        </scene>
+    </scenes>
+</document>
