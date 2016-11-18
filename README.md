@@ -25,7 +25,7 @@
     
       [pickerView show];
 ###Plist读取数据源:
-![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator Screen Shot 2016年11月18日 上午10.28.04.png)
+![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator Screen Shot 2016年11月18日 上午10.28.06.png)
 ####Plist读取数据源代码生成
       DLPickerView *pickerView = [[DLPickerView alloc] initWithPlistName:@"Time"
                                                       withSelectedItem:[sender.titleLabel.text componentsSeparatedByString:TimeSeparator]
