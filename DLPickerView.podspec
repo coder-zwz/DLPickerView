@@ -5,11 +5,7 @@ s.name             = 'DLPickerView'
 # 代码库的版本
 s.version          = '1.0'
 # 简介 
-s.summary          = '一种支持单列数据选择，多列数据选择，plist读取数据选择的多功能数据选择器，只需改变选择器NSArray数据源即可'
-# 描述
-s.description      = <<-DESC
-TODO: Add long description of the pod here.
-DESC
+s.summary          = "iOS开发常用的数据选择器"
 # 主页
 s.homepage         = 'https://github.com/coder-zwz/DLPickerView'
 # 许可证书类型，要和仓库的LICENSE 的类型一致
