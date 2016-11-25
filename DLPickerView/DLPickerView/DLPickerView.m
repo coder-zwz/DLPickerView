@@ -30,20 +30,20 @@
 #define PickerWeight                    kScreenFrame.size.width
 #define PickerHieght                    PickerViewHeightTypeMiddle
 
-#define HeaderButtonTitleFontSize       16
+#define HeaderButtonTitleFontSize       17
 #define HeaderButtonMargin              15
 
 #define CancelButtonPointX              HeaderButtonMargin
 #define CancelButtonPointY              0
 #define CancelButtonWeight              50
 #define CancelButtonHieght              PickerHeaderHieght
-#define CancelButtonTitleColor          [UIColor colorWithRed:51.0/255.0 green:51.0/255.0 blue:51.0/255.0 alpha:1]
+#define CancelButtonTitleColor          [UIColor colorWithRed:0.26f green:0.56f blue:1.00f alpha:1.00f]
 
 #define ConfirmButtonPointX             (PickerBackViewWeight - HeaderButtonMargin - ConfirmButtonWeight)
 #define ConfirmButtonPointY             0
 #define ConfirmButtonWeight             50
 #define ConfirmButtonHieght             PickerHeaderHieght
-#define ConfirmButtonTitleColor         [UIColor colorWithRed:51.0/255.0 green:51.0/255.0 blue:51.0/255.0 alpha:1]
+#define ConfirmButtonTitleColor         [UIColor colorWithRed:0.26f green:0.56f blue:1.00f alpha:1.00f]
 
 BOOL isString(id obj) {
     return [obj isKindOfClass:[NSString class]];
