@@ -1,9 +1,9 @@
 //
 //  DLPickerView.m
-//  demo
 //
-//  Created by diaolong on 16/2/1.
-//  Copyright © 2016年 diaolong. All rights reserved.
+//
+//  Created by zuweizhong on 16/2/1.
+//  Copyright © 2016年 visoft. All rights reserved.
 //
 
 #import "DLPickerView.h"
@@ -30,7 +30,7 @@
 #define PickerWeight                    kScreenFrame.size.width
 #define PickerHieght                    PickerViewHeightTypeMiddle
 
-#define HeaderButtonTitleFontSize       13
+#define HeaderButtonTitleFontSize       16
 #define HeaderButtonMargin              15
 
 #define CancelButtonPointX              HeaderButtonMargin
@@ -67,7 +67,7 @@ typedef NS_ENUM(NSInteger, PickerViewHeightType) {
 @property (nonatomic, assign) BOOL           isSingleColumn;
 @property (nonatomic, assign) BOOL           isDataSourceValid;
 @property (nonatomic, strong) UIView         *pickerBackView;
-@property (nonatomic, strong) UIView         *shadeView;
+@property (nonatomic, strong) UIButton       *shadeView;
 @property (nonatomic, strong) UIPickerView   *pickerView;
 @end
 
@@ -190,12 +190,26 @@ typedef NS_ENUM(NSInteger, PickerViewHeightType) {
 }
 
 -(void)initBackView {
-    self.shadeView = [[UIView alloc] initWithFrame:self.frame];
+    self.shadeView = [[UIButton alloc] initWithFrame:self.frame];
+    self.shadeView.userInteractionEnabled = NO;
+    [self.shadeView addTarget:self action:@selector(shadowViewClick:) forControlEvents:UIControlEventTouchUpInside];
     self.shadeView.backgroundColor = [UIColor blackColor];
     self.shadeView.alpha = ShadeViewAlphaWhenHide;
     [self addSubview:self.shadeView];
 }
-
+-(void)shadowViewClick:(UIButton *)btn
+{
+    [self hide:^{
+        
+    }];
+}
+-(void)setShouldDismissWhenClickShadow:(BOOL)shouldDismissWhenClickShadow
+{
+    _shouldDismissWhenClickShadow = shouldDismissWhenClickShadow;
+    if (shouldDismissWhenClickShadow) {
+        self.shadeView.userInteractionEnabled = YES;
+    }
+}
 - (void)initPickerBackView {
     self.pickerBackView = [[UIView alloc] initWithFrame:CGRectMake(PickerBackViewPointX,
                                                                    PickerBackViewPointYWhenHide,
@@ -219,12 +233,14 @@ typedef NS_ENUM(NSInteger, PickerViewHeightType) {
     
     UIButton *cancelButton = [[UIButton alloc] initWithFrame:cancelButtonFrame];
     [cancelButton setTitle:@"取消" forState:UIControlStateNormal];
+    self.cancelBtn = cancelButton;
     [cancelButton setTitleColor:CancelButtonTitleColor forState:UIControlStateNormal];
     [cancelButton addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
     cancelButton.titleLabel.font = [UIFont systemFontOfSize:HeaderButtonTitleFontSize];
     [self.pickerBackView addSubview:cancelButton];
     
     UIButton *confirmButton = [[UIButton alloc] initWithFrame:confirmButtonFrame];
+    self.confirmBtn = confirmButton;
     [confirmButton setTitle:@"确定" forState:UIControlStateNormal];
     [confirmButton setTitleColor:ConfirmButtonTitleColor forState:UIControlStateNormal];
     [confirmButton addTarget:self action:@selector(confirm) forControlEvents:UIControlEventTouchUpInside];
@@ -282,7 +298,9 @@ typedef NS_ENUM(NSInteger, PickerViewHeightType) {
 }
 
 - (void)cancel {
-    [self hide:nil];
+    [self hide:^{
+        
+    }];
 }
 
 - (void)hide:(void (^)(void))completion{

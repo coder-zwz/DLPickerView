@@ -31,6 +31,8 @@
                                                       }
                                 ];
     
+    pickerView.shouldDismissWhenClickShadow = YES;
+    
     [pickerView show];
 }
 
