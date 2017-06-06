@@ -10,7 +10,7 @@ DLPickerView is available on [CocoaPods](https://cocoapods.org/). Just add the f
 pod 'DLPickerView' # Podfile
 ```
 ###主要功能:
-![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator Screen Shot 2016年11月18日 上午10.27.58.png)
+![Image text](DLPickerView/screenshots/Simulator Screen Shot 2016年11月18日 上午10.27.58.png)
 ###多列数组数据源:
 ![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator Screen Shot 2016年11月18日 上午10.28.01.png)
 ```Objective-C
