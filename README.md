@@ -11,7 +11,7 @@ pod 'DLPickerView' # Podfile
 ```
 ### 主要功能:
 
-![Image text] (https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator1.png)
+![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator1.png)
 
 ### 多列数组数据源:
 
