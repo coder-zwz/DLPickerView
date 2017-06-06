@@ -10,10 +10,11 @@ DLPickerView is available on [CocoaPods](https://cocoapods.org/). Just add the f
 pod 'DLPickerView' # Podfile
 ```
 ###主要功能:
-![Image text](DLPickerView/screenshots/Simulator Screen Shot 2016年11月18日 上午10.27.58.png)
+![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator1.png)
 ###多列数组数据源:
-![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator Screen Shot 2016年11月18日 上午10.28.01.png)
+![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator2.png)
 ```Objective-C
+多列数组数据源:
 DLPickerView *pickerView = [[DLPickerView alloc] initWithDataSource:@[@[@"Bei Jing",@"Shang Hai"], @[@"Li Lei",@"Han Meimei"]]
                                                        withSelectedItem:[sender.titleLabel.text componentsSeparatedByString:OwnerSeparator]
                                                       withSelectedBlock:^(id selectedItem) {
@@ -23,8 +24,9 @@ DLPickerView *pickerView = [[DLPickerView alloc] initWithDataSource:@[@[@"Bei Ji
 [pickerView show];
 ```
 ###单列数组数据源:
-![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator Screen Shot 2016年11月18日 上午10.28.04.png)
+![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator3.png)
 ```Objective-C
+单列数组数据源:
 DLPickerView *pickerView = [[DLPickerView alloc] initWithDataSource:@[@"Man",@"Woman"]
                                                        withSelectedItem:sender.titleLabel.text
                                                       withSelectedBlock:^(id selectedItem) {
@@ -34,8 +36,9 @@ DLPickerView *pickerView = [[DLPickerView alloc] initWithDataSource:@[@"Man",@"W
 [pickerView show];
 ```
 ###Plist读取数据源:
-![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator Screen Shot 2016年11月18日 上午10.28.06.png)
+![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator4.png)
 ```Objective-C
+Plist读取数据源:
 DLPickerView *pickerView = [[DLPickerView alloc] initWithPlistName:@"Time"
                                                       withSelectedItem:[sender.titleLabel.text componentsSeparatedByString:TimeSeparator]
                                                      withSelectedBlock:^(id selectedItem) {
