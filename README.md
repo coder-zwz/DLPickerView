@@ -14,36 +14,35 @@ pod 'DLPickerView' # Podfile
 ###多列数组数据源:
 ![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator Screen Shot 2016年11月18日 上午10.28.01.png)
 ```Objective-C
-      
-      DLPickerView *pickerView = [[DLPickerView alloc] initWithDataSource:@[@[@"Bei Jing",@"Shang Hai"], @[@"Li Lei",@"Han Meimei"]]
+DLPickerView *pickerView = [[DLPickerView alloc] initWithDataSource:@[@[@"Bei Jing",@"Shang Hai"], @[@"Li Lei",@"Han Meimei"]]
                                                        withSelectedItem:[sender.titleLabel.text componentsSeparatedByString:OwnerSeparator]
                                                       withSelectedBlock:^(id selectedItem) {
                                                           [sender setTitle:[selectedItem componentsJoinedByString:OwnerSeparator] forState:UIControlStateNormal];
                                                       }
                                 ];
-    
-    [pickerView show];
+[pickerView show];
 ```
 ###单列数组数据源:
 ![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator Screen Shot 2016年11月18日 上午10.28.04.png)
-####单列数组数据源代码生成
-      DLPickerView *pickerView = [[DLPickerView alloc] initWithDataSource:@[@"Man",@"Woman"]
+```Objective-C
+DLPickerView *pickerView = [[DLPickerView alloc] initWithDataSource:@[@"Man",@"Woman"]
                                                        withSelectedItem:sender.titleLabel.text
                                                       withSelectedBlock:^(id selectedItem) {
                                                           [sender setTitle:selectedItem forState:UIControlStateNormal];
                                                       }
                                 ];
-    
-      [pickerView show];
+[pickerView show];
+```
 ###Plist读取数据源:
 ![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator Screen Shot 2016年11月18日 上午10.28.06.png)
-####Plist读取数据源代码生成
-      DLPickerView *pickerView = [[DLPickerView alloc] initWithPlistName:@"Time"
+```Objective-C
+DLPickerView *pickerView = [[DLPickerView alloc] initWithPlistName:@"Time"
                                                       withSelectedItem:[sender.titleLabel.text componentsSeparatedByString:TimeSeparator]
                                                      withSelectedBlock:^(id selectedItem) {
                                                          [sender setTitle:[selectedItem componentsJoinedByString:TimeSeparator] forState:UIControlStateNormal];
                                                      }
                                 ];
-      [pickerView show];
+[pickerView show];
+```
 
 
