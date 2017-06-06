@@ -9,11 +9,11 @@ DLPickerView is available on [CocoaPods](https://cocoapods.org/). Just add the f
 ```ruby
 pod 'DLPickerView' # Podfile
 ```
-###主要功能:
+### 主要功能:
 
-![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator1.png)
+![Image text] (https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator1.png)
 
-###多列数组数据源:
+### 多列数组数据源:
 
 ![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator2.png)
 
@@ -27,7 +27,7 @@ DLPickerView *pickerView = [[DLPickerView alloc] initWithDataSource:@[@[@"Bei Ji
                                 ];
 [pickerView show];
 ```
-###单列数组数据源:
+### 单列数组数据源:
 
 ![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator3.png)
 
@@ -41,7 +41,7 @@ DLPickerView *pickerView = [[DLPickerView alloc] initWithDataSource:@[@"Man",@"W
                                 ];
 [pickerView show];
 ```
-###Plist读取数据源:
+### Plist读取数据源:
 
 ![Image text](https://raw.githubusercontent.com/coder-zwz/DLPickerView/master/screenshots/Simulator4.png)
 
